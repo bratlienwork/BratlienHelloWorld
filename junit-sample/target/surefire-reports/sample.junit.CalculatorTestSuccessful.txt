@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: sample.junit.CalculatorTestSuccessful
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 30.006 s <<< FAILURE! - in sample.junit.CalculatorTestSuccessful
+testSum_1(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<11>
+	at sample.junit.CalculatorTestSuccessful.testSum_1(CalculatorTestSuccessful.java:39)
+
+testSum_2(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<6>
+	at sample.junit.CalculatorTestSuccessful.testSum_2(CalculatorTestSuccessful.java:48)
+
+testEqual(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError
+	at sample.junit.CalculatorTestSuccessful.testEqual(CalculatorTestSuccessful.java:121)
+
+testSum_3(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<13>
+	at sample.junit.CalculatorTestSuccessful.testSum_3(CalculatorTestSuccessful.java:57)
+
+testSum_6(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<13>
+	at sample.junit.CalculatorTestSuccessful.testSum_6(CalculatorTestSuccessful.java:84)
+
+testSum_7(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<4>
+	at sample.junit.CalculatorTestSuccessful.testSum_7(CalculatorTestSuccessful.java:93)
+
+testSum_4(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<4>
+	at sample.junit.CalculatorTestSuccessful.testSum_4(CalculatorTestSuccessful.java:66)
+
+testSum_5(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<6>
+	at sample.junit.CalculatorTestSuccessful.testSum_5(CalculatorTestSuccessful.java:75)
+
+testSubstraction(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at sample.junit.CalculatorTestSuccessful.testSubstraction(CalculatorTestSuccessful.java:128)
+

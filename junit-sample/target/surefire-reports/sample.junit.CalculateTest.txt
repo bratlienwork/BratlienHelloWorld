@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: sample.junit.CalculateTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 40.06 s <<< FAILURE! - in sample.junit.CalculateTest
+testSum_second(sample.junit.CalculateTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<10>
+	at sample.junit.CalculateTest.testSum_second(CalculateTest.java:50)
+
+testSum_One(sample.junit.CalculateTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: expected:<11> but was:<7>
+	at sample.junit.CalculateTest.testSum_One(CalculateTest.java:40)
+
+testSum_second(sample.junit.CalculateTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<10>
+	at sample.junit.CalculateTest.testSum_second(CalculateTest.java:50)
+
+testSum_One(sample.junit.CalculateTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<11> but was:<7>
+	at sample.junit.CalculateTest.testSum_One(CalculateTest.java:40)
+
