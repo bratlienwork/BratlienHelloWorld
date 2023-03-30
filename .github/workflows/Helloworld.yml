@@ -1,8 +1,8 @@
-name: Hello World
-on: workflow_dispatch
+name: hello-world
+on: push
 jobs:
-  example-job:
-   runs-on: windows-latest
+  my-job:
+    runs-on: windows-latest
     steps:
-      - name: example-step
-        run: echo "Hello World! from me"
+      - name: my-step
+        run: echo "Hello World!"
