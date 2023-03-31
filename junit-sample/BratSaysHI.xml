@@ -35,6 +35,11 @@ jobs:
        - name: List of files by extension
          uses: alisuleymantopuz/list-of-files-by-extension-github-action@v1.0.5
 
+      - name: "Check file presence"
+        uses: JJ/files-present-action@releases/v1
+        with:
+          files: "package.json, LICENSE, README.md, foo, bar"
+
 
     
 
