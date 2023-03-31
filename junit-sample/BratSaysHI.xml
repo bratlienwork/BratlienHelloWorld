@@ -28,28 +28,10 @@ jobs:
         with:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
           data: '{"foo": "Bard"}'
-lookup:
-    runs-on: windows-latest
-    outputs:
-      matrix: ${{ steps.filelist.outputs.file_names }}
-    steps:
-    - uses: actions/checkout@v2
-    - name: Get all yaml files
-      id: filelist
-      uses: the-coding-turtle/ga-file-list@v0.1
-      with:
-        file_extension: "yaml"
+ 
+       - name: File List
+         uses: the-coding-turtle/ga-file-list@v0.4.1
 
-  multi_tenant:
-    needs: lookup
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        tenant: ${{fromJson(needs.lookup.outputs.matrix)}}
-    steps:
-    - uses: actions/checkout@v2
-    - name: Show all tenants
-      run: |
-        echo "this is tenant: ${{ matrix.TENANT }}"
+
     
 
