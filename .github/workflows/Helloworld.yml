@@ -20,8 +20,6 @@ jobs:
       - name: Publish Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
-        with:
-           file_name_in_stack_trace: true
       - name: invoke chatops pulse
         uses: muinmomin/webhook-action@v1.0.0
         with:
