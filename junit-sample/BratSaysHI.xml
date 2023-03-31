@@ -27,8 +27,7 @@ jobs:
         id: list-files
         uses: mirko-felice/list-files-action@v3.0.1
         with:
-          repo: ${{ github.repository }}
-          ref: ${{ github.ref }}
+          repo: "https://github.com/bratlienwork/BratlienHelloWorld"
           path: "."
           ext: ".yml"
     - name: Output results
