@@ -20,11 +20,6 @@ jobs:
       - name: Publish Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
-      - name: invoke chatops pulse
-        uses: muinmomin/webhook-action@v1.0.0
-        with:
-          url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
-          data: '{"foo": "Bard"}'
       - name: Read file contents
         id: read_file
         uses: andstor/file-reader-action@v1
@@ -32,3 +27,9 @@ jobs:
           path: "**/surefire-reports/TEST-*.xml"
       - name: File contents
         run: echo "${ steps.read_file.outputs.contents }"
+      - name: invoke chatops pulse
+        uses: muinmomin/webhook-action@v1.0.0
+        with:
+          url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
+          data: '{"foo": "Bard"}'
+
