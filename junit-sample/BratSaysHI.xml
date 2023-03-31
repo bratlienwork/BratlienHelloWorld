@@ -28,22 +28,49 @@ jobs:
         with:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
           data: '{"foo": "Bard"}'
- 
-     - name: Read file contents
-        id: read_file
-        uses: andstor/file-reader-action@v1
+
+job_1:
+    name: Add 3 and 7
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v3
         with:
-          path: "D:\a\BratlienHelloWorld\BratlienHelloWorld\dependency-reduced-pom.xml"
-
-      - name: File contents
-        run: echo "${ steps.read_file.outputs.contents }"
-
-   - name: invoke chatops pulse 2
-        uses: muinmomin/webhook-action@v1.0.0
+          name: homework
+          path: math-homework.txt
+ job_2:
+    name: Multiply by 9
+    needs: job_1
+    runs-on: windows-latest
+    steps:
+      - name: Download math result for job 1
+        uses: actions/download-artifact@v3
         with:
-          url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
-          data: '{"foo": "Bard"}'
+          name: homework
+      - shell: bash
+        run: |
+          value=`cat math-homework.txt`
+          expr $value \* 9 > math-homework.txt
+      - name: Upload math result for job 2
+        uses: actions/upload-artifact@v3
+        with:
+          name: homework
+          path: math-homework.txt
 
-
-    
-
+  job_3:
+    name: Display results
+    needs: job_2
+    runs-on: macOS-latest
+    steps:
+      - name: Download math result for job 2
+        uses: actions/download-artifact@v3
+        with:
+          name: homework
+      - name: Print the final result
+        shell: bash
+        run: |
+          value=`cat math-homework.txt`
+          echo The result is $value
