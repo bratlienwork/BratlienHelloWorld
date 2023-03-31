@@ -19,7 +19,7 @@ jobs:
         run: mvn test --batch-mode --fail-at-end
 
       - name: Publish Test Report
-        uses: scacap/action-surefire-report@v1
+        uses: scacap/action-surefire-report@v1.7
         with: 
          file_name_in_stack_trace: true 
        - name: Read migrations
