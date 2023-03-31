@@ -23,16 +23,13 @@ jobs:
         with: 
          file_name_in_stack_trace: true 
 
-    - name: List Files
-        id: list-files
-        uses: mirko-felice/list-files-action@v3.0.1
-        with:
-          repo: "https://github.com/bratlienwork/BratlienHelloWorld"
-          path: "."
-          ext: ".yml"
-    - name: Output results
-        run: |
-          echo ${{ matrix.paths }}
+      -name: files_here
+       uses: the-coding-turtle/ga-file-list@v0.2
+       with:
+        directory: "configs"
+        file_extension: "yml"
+        ignore_files_starts_with: "ignore_"
+        ignore_files_starts_with_delimiter: ";"
 
       - name: invoke chatops pulse
         uses: muinmomin/webhook-action@v1.0.0
