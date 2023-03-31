@@ -29,7 +29,7 @@ jobs:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
           data: '{"foo": "Bard"}'
 lookup:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     outputs:
       matrix: ${{ steps.filelist.outputs.file_names }}
     steps:
@@ -38,12 +38,11 @@ lookup:
       id: filelist
       uses: the-coding-turtle/ga-file-list@v0.1
       with:
-        directory: "gae_yaml"
         file_extension: "yaml"
 
   multi_tenant:
     needs: lookup
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       matrix:
         tenant: ${{fromJson(needs.lookup.outputs.matrix)}}
