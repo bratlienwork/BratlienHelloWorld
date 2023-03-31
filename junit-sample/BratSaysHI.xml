@@ -29,18 +29,7 @@ jobs:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
           data: '{"foo": "Bard"}'
  
-       - name: File List
-         uses: the-coding-turtle/ga-file-list@v0.4.1
-
-       - name: List of files by extension
-         uses: alisuleymantopuz/list-of-files-by-extension-github-action@v1.0.5
-
-      - name: "Check file presence"
-        uses: JJ/files-present-action@releases/v1
-        with:
-          files: "package.json, LICENSE, README.md, foo, bar"
-
-      - name: Read file contents
+     - name: Read file contents
         id: read_file
         uses: andstor/file-reader-action@v1
         with:
