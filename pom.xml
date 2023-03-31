@@ -29,7 +29,7 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- end::junit[] -->
-	</dependencies>
+	
 	 <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-firefox-driver</artifactId>
@@ -80,7 +80,7 @@
             <artifactId>json</artifactId>
             <version>20150729</version>
         </dependency>
-
+</dependencies>
 	<build>
 		<plugins>
 			<plugin>
