@@ -45,7 +45,7 @@ public class CalculateTest {
     public void testSum_second() {
         int subResult = 10;
         System.out.println("----- START OF Verify function testSum -------------");
-        int sum = calculator.sum(2, 5);
+        int sum = calculator.sum(2, 8);
         System.out.println("@Test sum(): " + sum + " = " + subResult);
         Assert.assertEquals(sum, subResult);
         System.out.println("----- END OF Verify function testSum -------------");
