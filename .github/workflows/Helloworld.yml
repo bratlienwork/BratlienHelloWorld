@@ -40,7 +40,7 @@ jobs:
      #     file_extension: "xml"
       - name: Windows change
         if: success() || failure() # always run even if the previous step fails
-        run: dir /b D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\*.xml > print.txt && For /f "delims=" %%a in ('Type "print.txt"') do (echo %%a) 
+        run: dir /b D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\*.txt > print.txt && For /f "delims=" %%a in ('Type "print.txt"') do (echo %%a) 
         shell: cmd
       - name: Read test results
         id: testResultsFile
