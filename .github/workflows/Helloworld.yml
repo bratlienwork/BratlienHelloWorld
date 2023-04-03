@@ -32,8 +32,8 @@ jobs:
           #report_paths: '**/build/test-results/test/TEST-*.xml'     
           report_paths: 'D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\*.xml'     
       - name: Get All Test xml
-        uses: the-coding-turtle/ga-file-list@v0.1
+        uses: the-coding-turtle/ga-file-list@v0.4.1
         with:
-          directory: "surefire-reports"
+          directory: 'D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\'
           file_extension: "xml"
       
