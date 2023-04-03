@@ -43,8 +43,9 @@ jobs:
         run: dir /b D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\*.xml > print.txt && For /f "delims=" %%a in ('Type "print.txt"') do (echo %%a) 
         shell: cmd
       - name: Read test results
-        id: migrations
+        if: success() || failure() # always run even if the previous step fails
         uses: komorebitech/read-files-action@v1.5
+        id: migrations
         with:
          files: '["D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\TEST-sample.SuitTest.xml", "D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\TEST-sample.junit.CalculateTest.xml"]'
       - name: Echo migrations
