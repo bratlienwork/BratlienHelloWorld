@@ -51,4 +51,11 @@ jobs:
       - name: Echo migrations
         if: success() || failure() # always run even if the previous step fails
         run: echo "${{ steps.testResultsFile.outputs.content }}"
+      - name: Parser results
+        if: success() || failure() # always run even if the previous step fails
+        uses: muinmomin/webhook-action@v1.0.0
+        with:
+          url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
+          data: '{ steps.testResultsFile.outputs.content }'
+      
         
