@@ -43,11 +43,11 @@ jobs:
         run: dir /b D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\*.xml > print.txt && For /f "delims=" %%a in ('Type "print.txt"') do (echo %%a) 
         shell: cmd
       - name: Read test results
-        id: migrations
+        id: testResultsFile
         if: success() || failure() # always run even if the previous step fails
-        uses: komorebitech/read-files-action@v1.5        
+        uses: juliangruber/read-file-action@v1.1.6   
         with:
-         files: '["D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\TEST-sample.SuitTest.xml"]'
+         path: D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\TEST-sample.SuitTest.xml
       - name: Echo migrations
-        run: echo "${{ steps.migrations.outputs.content }}"
+        run: echo "${{ steps.testResultsFile.outputs.content }}"
         
