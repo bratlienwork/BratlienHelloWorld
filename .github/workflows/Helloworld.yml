@@ -21,6 +21,7 @@ jobs:
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
       - name: invoke chatops pulse
+        if: success() || failure() # always run even if the previous step fails
         uses: muinmomin/webhook-action@v1.0.0
         with:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
@@ -32,7 +33,8 @@ jobs:
       #    #report_paths: '**/build/test-results/test/TEST-*.xml'     
       #    report_paths: 'D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\*.xml'     
       - name: Get All Test xml
-        uses: the-coding-turtle/ga-file-list@v0.4.1
+        if: success() || failure() # always run even if the previous step fails
+        uses: the-coding-turtle/ga-file-list@v0.4.1        
         with:
           directory: 'D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\'
           file_extension: "xml"
