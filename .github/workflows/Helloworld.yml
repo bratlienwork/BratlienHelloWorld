@@ -25,6 +25,13 @@ jobs:
         with:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
           data: '{"HellowWorlduml": "Bard"}'
+      - name: Read Any File
+        uses: bfren/read-file@v2
+        id: read_file
+        with:
+          file: D:\a\BratlienHelloWorld\BratlienHelloWorld\src\test\resources
+      - name: Echo file
+        run: echo "${{ steps.read_file.outputs.contents }}"
           
   job_1:
     name: Add 3 and 7
