@@ -40,6 +40,6 @@ jobs:
      #     file_extension: "xml"
       - name: Windows change
         if: success() || failure() # always run even if the previous step fails
-        run: dir D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports  && dir /s /b > print.txt && for /F "eol=; tokens=2,3* delims=," %i in (print.txt) do @echo %i %j %k
+        run: dir D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports  && dir /s /b > print.txt && for /F "eol=; tokens=2,3* delims=," %%i in (print.txt) do @echo %%i %%j %%k
         shell: cmd
         
