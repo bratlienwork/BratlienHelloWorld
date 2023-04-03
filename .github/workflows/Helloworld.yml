@@ -39,7 +39,7 @@ jobs:
      #     directory: 'D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports'
      #     file_extension: "xml"
       - name: Windows bash
-        shell: bash
-        run: | 
-          value='dir /s /b /o:gn'
-          echo The result is $value
+        if: success() || failure() # always run even if the previous step fails
+        run: echo %PATH%
+        shell: cmd
+        
