@@ -53,20 +53,20 @@ jobs:
       - name: Print xml2json result
         if: success() || failure() # always run even if the previous step fails
         run: echo "${{ steps.xml2json.outputs.data }}"  
-      - name: Read test results
-        id: testResultsFile
-        if: success() || failure() # always run even if the previous step fails
-        uses: juliangruber/read-file-action@v1.1.6   
-        with:
-         path: D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\sample.junit.CalculateTest.txt
-      - name: Echo migrations
-        if: success() || failure() # always run even if the previous step fails
-        run: echo "${{ steps.testResultsFile.outputs.content }}"
+    #  - name: Read test results
+    #    id: testResultsFile
+    #    if: success() || failure() # always run even if the previous step fails
+    #    uses: juliangruber/read-file-action@v1.1.6   
+    #    with:
+    #     path: D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\sample.junit.CalculateTest.txt
+    #  - name: Echo migrations
+    #    if: success() || failure() # always run even if the previous step fails
+    #    run: echo "${{ steps.testResultsFile.outputs.content }}"
       - name: Parser results
         if: success() || failure() # always run even if the previous step fails
         uses: muinmomin/webhook-action@v1.0.0
         with:
           url: "https://pulse-7-container.qtestnet.com/webhook/53b32c57-368c-4b9b-a4e0-af11389c5438"
-          data: "${{ steps.xml2json.outputs.data  }}"
+          data: "${{ steps.xml2json.outputs.output  }}"
       
         
