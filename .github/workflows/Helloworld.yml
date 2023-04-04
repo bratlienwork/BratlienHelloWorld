@@ -52,7 +52,7 @@ jobs:
          to: 'json'
       - name: Print xml2json result
         if: success() || failure() # always run even if the previous step fails
-        run: echo "${{ steps.xml2json.outputs.output }}"  
+        run: echo "${{ steps.xml2json.outputs.data }}"  
     #  - name: Read test results
     #    id: testResultsFile
     #    if: success() || failure() # always run even if the previous step fails
