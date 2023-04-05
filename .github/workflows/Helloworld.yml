@@ -67,7 +67,7 @@ jobs:
         id: read_file
         uses: andstor/file-reader-action@v1.0.0
         with: 
-          path: D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\sample.junit.CalculateTest.mxl
+          path: D:\a\BratlienHelloWorld\BratlienHelloWorld\target\surefire-reports\TEST-sample.SuitTest.xml
       - name: File contents
         run: echo "${ steps.read_file.outputs.contents }"
       - name: Parser results
