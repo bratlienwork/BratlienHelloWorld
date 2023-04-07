@@ -31,11 +31,12 @@ jobs:
           echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
-          while IFS= read -r line
+          input=i
+          while read -r line
           do
             # take action on $line #
             echo "$line"
-            done <<< $(command)
+            done < "input"
           done
           
       - name: Read XML file
