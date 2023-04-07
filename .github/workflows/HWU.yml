@@ -32,6 +32,8 @@ jobs:
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
           input=$i
+          echo "$input"
+          echo ${{ steps.pl.outputs.paths }}
           while read -r line
           do
             # take action on $line #
