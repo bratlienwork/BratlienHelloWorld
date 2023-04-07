@@ -18,6 +18,14 @@ jobs:
       - name: Publish Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
+      - name: list files
+        if: success() || failure() # always run even if the previous step fails
+        id: list-files
+        uses: mirko-felice/list-files-action@v3.0.1
+        with:
+          path: "target/surefire-reports"
+          ext: ".xml"
+    
       - name: Get All Test xml
         if: success() || failure() # always run even if the previous step fails
         uses: the-coding-turtle/ga-file-list@v0.4.1        
