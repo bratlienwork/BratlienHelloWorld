@@ -31,14 +31,13 @@ jobs:
           echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
+          while IFS= read -r line
+          do
+            # take action on $line #
+            echo "$line"
+            done <<< $(command)
           done
           
-      - name: Get All Test xml
-        if: success() || failure() # always run even if the previous step fails
-        uses: the-coding-turtle/ga-file-list@v0.4.1        
-        with:
-          directory: "target/surefire-reports"
-          file_extension: "xml"
       - name: Read XML file
         if: success() || failure() # always run even if the previous step fails
         id: read_file
