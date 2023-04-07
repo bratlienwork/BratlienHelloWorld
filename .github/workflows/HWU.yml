@@ -1,7 +1,7 @@
 name: hello-world
 on: push
 jobs:
-  my-job:
+  my-job-action:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
