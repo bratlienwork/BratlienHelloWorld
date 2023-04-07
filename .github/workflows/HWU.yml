@@ -22,7 +22,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         uses: the-coding-turtle/ga-file-list@v0.4.1        
         with:
-          report_paths: '**/build/test-results/test/TEST-*.xml'   
+          directory: "**/build/test-results/test/TEST-*.xml"
           file_extension: "xml"
       - name: Read XML file
         if: success() || failure() # always run even if the previous step fails
