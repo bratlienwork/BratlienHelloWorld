@@ -23,7 +23,7 @@ jobs:
         id: pl
         uses: Rishabh510/Path-lister-action@master
         with:
-          path: "/home/runner/work/BratlienHelloWorld/BratlienHelloWorld/target/surefire-reports/"
+          path: "/home/runner/work/BratlienHelloWorld/BratlienHelloWorld/target/surefire-reports"
           type: ".xml"
       - name: Output results
         if: success() || failure() # always run even if the previous step fails
