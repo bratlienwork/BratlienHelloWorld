@@ -31,13 +31,16 @@ jobs:
           echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
-          echo "This is $PATH"
-          while read -r line; do
-            name = "$line"
-            echo "Name read from file - $name"
-          done < "$i"
           done
           
+      - name: Read package.json
+        id: package
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: /home/runner/work/BratlienHelloWorld/BratlienHelloWorld/target/surefire-reports/TEST-sample.junit.CalculateTest.xml
+      - name: Echo package.json
+        run: echo "${{ steps.package.outputs.content }}"   
+        
       - name: Read XML file
         if: success() || failure() # always run even if the previous step fails
         id: read_file
