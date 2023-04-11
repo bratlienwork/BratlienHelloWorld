@@ -28,6 +28,7 @@ jobs:
       - name: Output results
         if: success() || failure() # always run even if the previous step fails
         run: |
+          echo $PWD
           echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
