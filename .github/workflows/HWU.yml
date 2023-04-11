@@ -31,7 +31,7 @@ jobs:
           echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
-          echo "$PATH"
+          echo "This is $PATH"
           while read -r line; do
             name = "$line"
             echo "Name read from file - $name"
