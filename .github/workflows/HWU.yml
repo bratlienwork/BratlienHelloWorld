@@ -72,7 +72,6 @@ jobs:
         #run: echo "${ steps.read_file.outputs.contents }"
         run: |
              const obj = "${{ steps.read_file.outputs.contents }}"
-             echo "junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml"
              const myJson = JSON.stringify(obj);
              echo $myJson
       - name: Parser results
