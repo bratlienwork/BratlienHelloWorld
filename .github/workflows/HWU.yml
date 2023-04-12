@@ -50,8 +50,11 @@ jobs:
       - name: Echo package.json
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${{ steps.package.outputs.content }}"  
-        run: xml_pp "${{ steps.package.outputs.content }}"  
-        
+        run: echo "${{ steps.package.outputs.content }}"  
+      
+      - name: xml_pp
+        if: success() || failure() # always run even if the previous step fails
+        run: xml_pp junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml
       - name: Parser results v1
         if: success() || failure() # always run even if the previous step fails
         uses: muinmomin/webhook-action@v1.0.0
