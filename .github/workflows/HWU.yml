@@ -33,7 +33,13 @@ jobs:
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
           done
-          
+      - name: FileExist
+        if: success() || failure() # always run even if the previous step fails
+        run: |
+          FILE=/github/workspace/target/surefire-reports/TEST-sample.junit.CalculateTest.xml
+          if test -f "$FILE"; then
+            echo "$FILE exists."
+          fi
       - name: Read package.json
         if: success() || failure() # always run even if the previous step fails
         id: package
