@@ -51,7 +51,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${{ steps.package.outputs.content }}"  
         run: 
-             echo "${{ steps.package.outputs.content }}"  | cat   
+             cat "${{ steps.package.outputs.content }}" 
    
       - name: Parser results v1
         if: success() || failure() # always run even if the previous step fails
