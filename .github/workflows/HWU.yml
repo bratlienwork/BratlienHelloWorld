@@ -36,7 +36,7 @@ jobs:
       - name: FileExist
         if: success() || failure() # always run even if the previous step fails
         run: |
-          FILE=/github/workspace/target/surefire-reports/TEST-sample.junit.CalculateTest.xml
+          FILE=./github/workspace/target/surefire-reports/TEST-sample.junit.CalculateTest.xml
           if test -f "$FILE"; then
             echo "$FILE exists."
           fi
