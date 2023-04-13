@@ -71,9 +71,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${ steps.read_file.outputs.contents }"
         run: |
-             obj = "${{ steps.read_file.outputs.contents }}"
-             myJson = JSON.stringify($obj);
-             echo $myJson
+             echo JSON.stringify("${{ steps.read_file.outputs.contents }}");
       - name: Parser results
         if: success() || failure() # always run even if the previous step fails
         uses: muinmomin/webhook-action@v1.0.0
