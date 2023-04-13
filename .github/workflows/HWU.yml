@@ -71,7 +71,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${ steps.read_file.outputs.contents }"
         run: |
-             const obj = "${{ steps.read_file.outputs.contents }}"
+             var obj = "${{ steps.read_file.outputs.contents }}"
              var myJson = JSON.stringify($obj);
              echo $myJson
       - name: Parser results
