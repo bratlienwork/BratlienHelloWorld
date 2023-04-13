@@ -79,11 +79,14 @@ jobs:
           # here we can place the command that will generate multi-line text
           echo $MULTI_LINES_TEXT >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+          base64result=${{ steps.read_file.outputs.contents}}
+          echo "base64_results_env_var=$base64result" >> $GITHUB_ENV2
           
       - name: Using the previously defined environment variable
         if: success() || failure() # always run even if the previous step fails
         run: |
           echo ${{ env.MULTI_LINES_TEXT }}
+          echo ${{ env.base64_results_env_var }}
  
       - name: Parser results
         if: success() || failure() # always run even if the previous step fails
