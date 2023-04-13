@@ -73,7 +73,7 @@ jobs:
         # run: echo "${ steps.read_file.outputs.contents }"
         # base64 "junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml" >> $GITHUB_OUTPUT
         run: |
-          cat "junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml" | base64 
+          cat "junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml" | base64 > $GITHUB_OUTPUT
              
  
       - name: Parser results
