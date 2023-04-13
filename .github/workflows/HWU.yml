@@ -81,6 +81,7 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
           
       - name: Using the previously defined environment variable
+        if: success() || failure() # always run even if the previous step fails
         run: |
           echo ${{ env.ONE_LINE_TEXT_ENV_VAR }}
  
