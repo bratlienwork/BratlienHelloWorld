@@ -75,12 +75,12 @@ jobs:
                             this is line two \n
                             this is line three \n"    
 
-          echo "MULTI_LINES_TEXT_ENV_VAR<<EOF" >> $GITHUB_ENV
+          echo "MULTI_LINES_TEXT_ENV_VAR<<EOF" >> $GITHUB_ENV2
           # here we can place the command that will generate multi-line text
-          echo $MULTI_LINES_TEXT >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-          base64result="${{ steps.read_file.outputs.contents}}"
-          echo "base64_results_env_var=$base64result" >> $GITHUB_ENV2
+          echo $MULTI_LINES_TEXT >> $GITHUB_ENV2
+          echo "EOF" >> $GITHUB_ENV2
+          base64 "junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml" >> $GITHUB_ENV
+          
           
       - name: Using the previously defined environment variable
         if: success() || failure() # always run even if the previous step fails
