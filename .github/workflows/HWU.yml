@@ -79,7 +79,7 @@ jobs:
           # here we can place the command that will generate multi-line text
           echo $MULTI_LINES_TEXT >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-          base64result=${{ steps.read_file.outputs.contents}}
+          base64result="${{ steps.read_file.outputs.contents}}"
           echo "base64_results_env_var=$base64result" >> $GITHUB_ENV2
           
       - name: Using the previously defined environment variable
