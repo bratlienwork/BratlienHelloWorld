@@ -51,7 +51,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${{ steps.package.outputs.content }}"  
         run: 
-             cat "${} steps.package.outputs.content }}" 
+             cat "${{ steps.package.outputs.content }}" 
    
       - name: Parser results v1
         if: success() || failure() # always run even if the previous step fails
@@ -75,11 +75,11 @@ jobs:
                             this is line two \n
                             this is line three \n"    
 
-          echo "MULTI_LINES_TEXT_ENV_VAR<<EOF" >> $GITHUB_ENV2
+          echo "MULTI_LINES_TEXT_ENV_VAR<<EOF" >> $GITHUB_ENV
           # here we can place the command that will generate multi-line text
-          echo $MULTI_LINES_TEXT >> $GITHUB_ENV2
-          echo "EOF" >> $GITHUB_ENV2
-          encod_data=`echo -n $GITHUB_ENV2 | base64`          
+          echo $MULTI_LINES_TEXT >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          encod_data=`echo -n $GITHUB_ENV | base64`          
           echo "Encoded text is : $encod_data"
                  
           
@@ -104,4 +104,4 @@ jobs:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
           # data: "${{ steps.xml2json.outputs.output }}"
           #data: "${{ steps.read_file.outputs.contents }}"
-          data: 'JSON.stringify("${{ steps.read_file.outputs.contents }}")'
+          data: "JSON.stringify("${{ steps.read_file.outputs.contents }}")"
