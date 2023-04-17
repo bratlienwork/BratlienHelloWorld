@@ -51,7 +51,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${{ steps.package.outputs.content }}"  
         run: 
-             cat "${ steps.package.outputs.content }" 
+             cat "${} steps.package.outputs.content }}" 
    
       - name: Parser results v1
         if: success() || failure() # always run even if the previous step fails
@@ -79,14 +79,14 @@ jobs:
           # here we can place the command that will generate multi-line text
           echo $MULTI_LINES_TEXT >> $GITHUB_ENV2
           echo "EOF" >> $GITHUB_ENV2
-          base64 "junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml" >> $GITHUB_ENV
-          
+          encod_data=`echo -n $GITHUB_ENV2 | base64`          
+          echo "Encoded text is : $encod_data"
+                 
           
       - name: Using the previously defined environment variable
         if: success() || failure() # always run even if the previous step fails
         run: |
           echo ${{ env.MULTI_LINES_TEXT }}
-          echo ${{ env.base64_results_env_var }}
  
       - name: Parser results
         if: success() || failure() # always run even if the previous step fails
