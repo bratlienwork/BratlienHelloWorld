@@ -50,7 +50,7 @@ jobs:
       - name: Echo package.json
         if: success() || failure() # always run even if the previous step fails
         #run: echo "${{ steps.package.outputs.content }}"  
-        run: cat "${{ steps.package.outputs.content }}"  
+        run: cat "${ steps.package.outputs.content }"  
      
      # - name: send via curl
      #   if: success() || failure() # always run even if the previous step fails
