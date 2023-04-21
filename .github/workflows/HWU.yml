@@ -95,7 +95,7 @@ jobs:
         run: |
           my_var=$(cat junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml)          
           echo "$my_var" | base64
-          encod_data='$echo -n "$my_var" | base64'
+          encod_data=$(echo "$my_var" | base64)
           echo "Encoded text is : $encod_data"
           
       #- name: Using the previously defined environment variable
