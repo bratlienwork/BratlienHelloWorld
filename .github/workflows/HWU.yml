@@ -92,18 +92,18 @@ jobs:
        #encod_data=`echo -n $GITHUB_ENV | base64`          
        #echo "Encoded text is : $encod_data"
        #echo "my_var is : $my_var"
+       #echo "$my_var" | base64
+       #echo "Encoded text is : $encod_data"
         run: |
           my_var=$(cat junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml)          
-          echo "$my_var" | base64
           encod_data=$(echo "$my_var" | base64)
-          echo "Encoded text is : $encod_data"
           echo $encod_data >> $GITHUB_ENV
           
-      #- name: Using the previously defined environment variable
-      #  if: success() || failure() # always run even if the previous step fails
-      #  run: |
-      #    echo ${{ env.MULTI_LINES_TEXT }}
- 
+      - name: Using the previously defined environment variable
+        if: success() || failure() # always run even if the previous step fails
+        run: |
+          echo ${{ env.encod_data }}    
+          
       - name: Parser results
         if: success() || failure() # always run even if the previous step fails
         uses: muinmomin/webhook-action@v1.0.0
