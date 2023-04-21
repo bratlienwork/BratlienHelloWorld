@@ -119,7 +119,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         run: |
            curlComandbase="--request POST https://pulse-7-container.qtestnet.com/webhook/53b32c57-368c-4b9b-a4e0-af11389c5438 -d "projectId=106715&testcycle=6335148&result="
-           curlcommandWhole="$curlComandbase"${{ env.encod_data }} 
+           curlcommandWhole=$curlComandbase ${{ env.encod_data }} 
            curl "$curlcommandWhole"
            curl --request POST https://pulse-7-container.qtestnet.com/webhook/53b32c57-368c-4b9b-a4e0-af11389c5438 -d "projectId=106715&testcycle=6335148&result=$env.encod_data"
       - name: invoke chatops pulse with json
