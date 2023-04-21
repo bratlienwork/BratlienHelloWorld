@@ -99,10 +99,10 @@ jobs:
           encod_data=$(echo "$my_var" | base64)
           echo $encod_data >> $GITHUB_ENV
           
-     # - name: Using the previously defined environment variable
-     #  if: success() || failure() # always run even if the previous step fails
-     #   run: |
-     #     echo ${{ env.encod_data }}    
+      - name: Using the previously defined environment variable
+        if: success() || failure() # always run even if the previous step fails
+        run: |
+          echo ${{ env.encod_data }}    
           
       - name: Parser results
         if: success() || failure() # always run even if the previous step fails
