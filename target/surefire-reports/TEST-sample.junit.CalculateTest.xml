@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="sample.junit.CalculateTest" time="0.067" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="sample.junit.CalculateTest" time="0.041" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,6 +60,6 @@
     <property name="java.vendor.version" value="Temurin-11.0.18+10"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="sample.junit.CalculateTest" name="testSum_second" time="0.066"/>
-  <testcase classname="sample.junit.CalculateTest" name="testSum_One" time="0.001"/>
+  <testcase classname="sample.junit.CalculateTest" name="testSum_second" time="0.038"/>
+  <testcase classname="sample.junit.CalculateTest" name="testSum_One" time="0.003"/>
 </testsuite>
