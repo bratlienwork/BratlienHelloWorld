@@ -1,5 +1,7 @@
 name: hello-world
 on: push
+permissions:
+ contents: write
 jobs:
   my-job-action:
     runs-on: ubuntu-latest
