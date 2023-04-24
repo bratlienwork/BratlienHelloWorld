@@ -29,6 +29,8 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         id: commit
         run: |
+          git config --global alias.coa '!git add -A && git commit -m'
+          git coa "A bunch of horrible changes"
           git add -- all
           if [-z "$(git status --porcelain)"]; then
              echo "::set-output name=push::false"
