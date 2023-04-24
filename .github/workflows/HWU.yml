@@ -135,7 +135,7 @@ jobs:
            
            echo VABoAGEAdAAnAHMAIABuAG8AIABtAG8AbwBuACEA | base64 -d | iconv -f utf-16 -t utf-8; echo
            my_var=$(cat junit-sample/target/surefire-reports/TEST-sample.junit.CalculateTest.xml) 
-           encod_data=$(echo -n "$my_var" | base64 --wrap=0| iconv -f utf-16 -t utf-8;)
+           encod_data=$(echo -n "$my_var" | base64 --wrap=0| iconv -f utf-8 -t utf-16;)
            echo $encod_data >> $GITHUB_ENV
            echo "This is encoded -> $encod_data <- End"
            curlComandbase="--request POST https://pulse-7-container.qtestnet.com/webhook/53b32c57-368c-4b9b-a4e0-af11389c5438 -d"
