@@ -29,6 +29,8 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         id: commit
         run: |
+          git config user.email "p.bratlien@tricentis.com"
+          git config user.name "Paul"
           git config --global alias.coa '!git add -A && git commit -m'
           git coa "A bunch of horrible changes"
           git add -- all
