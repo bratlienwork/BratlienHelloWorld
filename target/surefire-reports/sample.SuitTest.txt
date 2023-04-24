@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: sample.SuitTest
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 9, Errors: 0, Skipped: 1, Time elapsed: 40.065 sec <<< FAILURE!
-testEqual(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.006 sec  <<< FAILURE!
+Tests run: 18, Failures: 9, Errors: 0, Skipped: 1, Time elapsed: 40.067 sec <<< FAILURE!
+testEqual(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.007 sec  <<< FAILURE!
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
@@ -146,7 +146,7 @@ java.lang.AssertionError: expected:<7> but was:<6>
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testSum_3(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.001 sec  <<< FAILURE!
+testSum_3(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<7> but was:<13>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -242,7 +242,7 @@ java.lang.AssertionError: expected:<7> but was:<4>
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testSum_5(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.001 sec  <<< FAILURE!
+testSum_5(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<7> but was:<6>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -290,7 +290,7 @@ java.lang.AssertionError: expected:<7> but was:<6>
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testSum_6(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.006 sec  <<< FAILURE!
+testSum_6(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.005 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<7> but was:<13>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -338,7 +338,7 @@ java.lang.AssertionError: expected:<7> but was:<13>
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testSum_7(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.004 sec  <<< FAILURE!
+testSum_7(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.003 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<7> but was:<4>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -386,7 +386,7 @@ java.lang.AssertionError: expected:<7> but was:<4>
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testSubstraction(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.009 sec  <<< FAILURE!
+testSubstraction(sample.junit.CalculatorTestSuccessful)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
