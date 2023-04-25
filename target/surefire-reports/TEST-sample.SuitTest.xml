@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="9" name="sample.SuitTest" time="40.037" errors="0" skipped="1">
+<testsuite tests="18" failures="9" name="sample.SuitTest" time="40.064" errors="0" skipped="1">
   <properties>
     <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,10 +60,10 @@
     <property name="java.vendor.version" value="Temurin-11.0.18+10"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="sample.junit.CalculateTest" name="testSum_second" time="0.002"/>
-  <testcase classname="sample.junit.CalculateTest" name="testSum_One" time="0.001"/>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testTimeOut" time="30.003"/>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testEqual" time="0.005">
+  <testcase classname="sample.junit.CalculateTest" name="testSum_second" time="0.005"/>
+  <testcase classname="sample.junit.CalculateTest" name="testSum_One" time="0.003"/>
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testTimeOut" time="30.005"/>
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testEqual" time="0.004">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
@@ -111,13 +111,13 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_1" time="0.002">
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_1" time="0.003">
     <failure message="expected:&lt;7&gt; but was:&lt;11&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;7&gt; but was:&lt;11&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -165,14 +165,14 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_1 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_2" time="0.002">
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_2" time="0.008">
     <failure message="expected:&lt;7&gt; but was:&lt;6&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;7&gt; but was:&lt;6&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -220,11 +220,11 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_2 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
   <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_3" time="0.002">
@@ -275,14 +275,14 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_3 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_4" time="0.003">
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_4" time="0.002">
     <failure message="expected:&lt;7&gt; but was:&lt;4&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;7&gt; but was:&lt;4&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -330,14 +330,14 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_4 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_5" time="0.002">
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_5" time="0.003">
     <failure message="expected:&lt;7&gt; but was:&lt;6&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;7&gt; but was:&lt;6&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -385,14 +385,14 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_5 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_6" time="0.002">
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_6" time="0.003">
     <failure message="expected:&lt;7&gt; but was:&lt;13&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;7&gt; but was:&lt;13&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -440,11 +440,11 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_6 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
   <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSum_7" time="0.002">
@@ -495,14 +495,14 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 ----- START OF Verify function testSum_7 in CalculatorTestSuccessful class -------------
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSubstraction" time="0.002">
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testSubstraction" time="0.003">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
@@ -549,16 +549,16 @@ This is executed after each Test
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>......Waiting.... .. at 2023/04/24 20:58:46
+    <system-out>......Waiting.... .. at 2023/04/25 01:27:42
 This is executed before each Test
 This is executed after each Test
-......END --- Waiting.... .. at 2023/04/24 20:58:46
+......END --- Waiting.... .. at 2023/04/25 01:27:42
 </system-out>
   </testcase>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testDivisionException" time="0.001"/>
-  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testDivison" time="0.001"/>
-  <testcase classname="sample.junit.HelloWord" name="sayHello" time="0.001"/>
-  <testcase classname="sample.junit.HelloWord" name="testTimeOut" time="10.006"/>
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testDivisionException" time="0.005"/>
+  <testcase classname="sample.junit.CalculatorTestSuccessful" name="testDivison" time="0.003"/>
+  <testcase classname="sample.junit.HelloWord" name="sayHello" time="0.004"/>
+  <testcase classname="sample.junit.HelloWord" name="testTimeOut" time="10.009"/>
   <testcase classname="sample.junit.HelloWord" name="test" time="0"/>
   <testcase classname="sample.junit.HelloWord" name="infinity" time="0">
     <skipped/>
