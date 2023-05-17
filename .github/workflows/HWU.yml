@@ -1,8 +1,8 @@
 name: hello-world
-on:
-  repository_dispatch:
-  schedule:
-    - cron: '5 12 * * 0'
+#on:
+#  repository_dispatch:
+#  schedule:
+#    - cron: '5 12 * * 0'
 
 on: push
 permissions:
