@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="sample.junit.CalculateTest" time="0.051" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="sample.junit.CalculateTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="11.0.18+10"/>
+    <property name="java.vm.version" value="11.0.19+7"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/temurin-11-jdk-amd64/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/home/runner/work/BratlienHelloWorld/BratlienHelloWorld"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
@@ -16,7 +16,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/runner/work/BratlienHelloWorld/BratlienHelloWorld"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="11.0.18+10"/>
+    <property name="java.runtime.version" value="11.0.19+7"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
@@ -32,7 +32,7 @@
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="5.15.0-1035-azure"/>
+    <property name="os.version" value="5.15.0-1037-azure"/>
     <property name="library.jansi.path" value="/usr/share/apache-maven-3.8.8/lib/jansi-native"/>
     <property name="user.home" value="/home/runner"/>
     <property name="user.timezone" value="Etc/UTC"/>
@@ -49,17 +49,17 @@
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="11.0.18"/>
+    <property name="java.version" value="11.0.19"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
     <property name="maven.home" value="/usr/share/apache-maven-3.8.8"/>
     <property name="file.separator" value="/"/>
-    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.version.date" value="2023-04-18"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="java.vendor.version" value="Temurin-11.0.18+10"/>
+    <property name="java.vendor.version" value="Temurin-11.0.19+7"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="sample.junit.CalculateTest" name="testSum_second" time="0.048"/>
-  <testcase classname="sample.junit.CalculateTest" name="testSum_One" time="0.003"/>
+  <testcase classname="sample.junit.CalculateTest" name="testSum_second" time="0.001"/>
+  <testcase classname="sample.junit.CalculateTest" name="testSum_One" time="0"/>
 </testsuite>
